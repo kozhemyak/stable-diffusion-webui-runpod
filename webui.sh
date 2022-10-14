@@ -70,7 +70,13 @@ then
 fi
 
 # Check prequisites
-for preq in git python3
+
+#################
+apt update
+apt install git python3 python3-venv python3-pip ffmpeg libsm6 libxext6 gdown -y
+#################
+
+for preq in wget git python3 python3-venv
 do
     if ! hash "${preq}" &>/dev/null
     then
